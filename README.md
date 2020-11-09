@@ -10,7 +10,7 @@
 - PHP 7.4 or higher.
 
 #### Installation
-- run `compose require alaame/setting`
+- run `composer require alaame/laravel-translations`
 - publish config file `php artisan vendor:publish --provider="Alaame\LaravelTranslations\LaravelTranslationsServiceProvider"`
 
 #### usage 
