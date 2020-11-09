@@ -1,0 +1,37 @@
+{
+  "name": "alaame/laravel-translations",
+  "description": "This package tends to add php and json translations to ",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "alaa mohammed",
+      "email": "alaamebrahim91@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.8",
+    "mockery/mockery": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Alaame\\LaravelTranslations\\": "src/"
+    },
+    "files": [
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Alaame\\LaravelTranslations\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Alaame\\LaravelTranslations\\LaravelTranslationsServiceProvider"
+      ]
+    }
+  }
+}
