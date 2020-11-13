@@ -31,9 +31,9 @@ class LaravelTranslationsServiceProvider extends ServiceProvider
 
     protected function registerBladeDirective()
     {
-        Cache::remember('translations', cache('ame-translations.cache_ttl'), function () {
+        Cache::remember('translations', config('ame-translations.cache_ttl'), function () {
             $translations = collect();
-            foreach (config('ame-translations.supported-locales') as $locale) { // suported locales
+            foreach (config('ame-translations.supported-locales') as $locale) { // supported locales
                 $translations[$locale] = [
                     'php' => $this->phpTranslations($locale),
                     'json' => $this->jsonTranslations($locale),
@@ -44,7 +44,7 @@ class LaravelTranslationsServiceProvider extends ServiceProvider
         });
 
         Blade::directive('translations', function () {
-            return '<script>window._translations =' . cache('translations') . '</script>';
+            return '<script>window._translations =' . Cache::get('translations') . '</script>';
         });
     }
 
