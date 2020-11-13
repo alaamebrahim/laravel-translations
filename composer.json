@@ -11,20 +11,9 @@
   "require": {
     "php": "^7.4"
   },
-  "require-dev": {
-    "orchestra/testbench": "^3.8",
-    "mockery/mockery": "^1.2"
-  },
   "autoload": {
     "psr-4": {
       "Alaame\\LaravelTranslations\\": "src/"
-    },
-    "files": [
-    ]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Alaame\\LaravelTranslations\\Tests\\": "tests/"
     }
   },
   "extra": {

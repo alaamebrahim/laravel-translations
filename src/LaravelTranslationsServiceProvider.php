@@ -24,8 +24,12 @@ class LaravelTranslationsServiceProvider extends ServiceProvider
 
     private function registerConfig()
     {
+        $configDir = __DIR__ . '/Config/ame-translations.php';
+
+        $this->mergeConfigFrom($configDir, 'ame-translations');
+
         $this->publishes([
-            __DIR__ . '/Config/ame-translations.php' => config_path('ame-translations.php'),
+            $configDir => config_path('ame-translations.php'),
         ], 'ame-translations');
     }
 
